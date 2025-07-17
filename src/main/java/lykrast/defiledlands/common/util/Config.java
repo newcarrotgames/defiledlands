@@ -25,6 +25,7 @@ public class Config {
 	// Book Wyrms
 	public static boolean bookWyrmSpawn;
 	public static float conversionRate;
+	public static float goldenVariantProbability;	// chance that a new bookwyrm is golden
 	
 	// World
 	public static int weightDesertDefiled, weightPlainsDefiled, weightForestTenebra, weightForestVilespine, weightHillsDefiled, weightSwampDefiled, weightIcePlainsDefiled;
@@ -74,6 +75,8 @@ public class Config {
         		"Can Book Wyrms naturally spawn");
         conversionRate = cfg.getFloat("conversionRate", CATEGORY_BOOK_WYRM, 1.0F, 0.01F, 10.0F, 
         		"Multiplier applied to enchanted books's level fed to Book Wyrms, highly recommended to keep below 1");
+		goldenVariantProbability = cfg.getFloat("goldenVariantProbability", CATEGORY_BOOK_WYRM, 0.2F, 0.01F, 1.0F,
+        		"Chance new bookwyms are golden");
         
         // World
         weightDesertDefiled = cfg.getInt("weightDesertDefiled", CATEGORY_WORLD, 3, 0, 100, 
